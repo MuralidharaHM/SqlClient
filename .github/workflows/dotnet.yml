@@ -21,3 +21,12 @@ jobs:
       run: dotnet restore src/Microsoft.Data.SqlClient/netcore/src/Microsoft.Data.SqlClient.csproj
     - name: Build
       run: dotnet build --no-restore src/Microsoft.Data.SqlClient/netcore/src/Microsoft.Data.SqlClient.csproj
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.2
+      with:
+      # Artifact name
+       name: Artifacts
+       # A file, directory or wildcard pattern that describes what to upload
+       path: /home/runner/work/SqlClient/SqlClient/artifacts/Project/bin/Unix/Debug.AnyCPU/Microsoft.Data.SqlClient/netcore/
+
+    
