@@ -20,7 +20,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore src/Microsoft.Data.SqlClient/netcore/src/Microsoft.Data.SqlClient.csproj
     - name: Build
-      run: dotnet publish src/Microsoft.Data.SqlClient/netcore/src/Microsoft.Data.SqlClient.csproj
+      run: dotnet publish --framework netcoreapp3.1  src/Microsoft.Data.SqlClient/netcore/src/Microsoft.Data.SqlClient.csproj
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.2
       with:
