@@ -1,0 +1,17 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- 2.0-servicing
+
+pool:
+  vmImage: ubuntu-default
+
+steps:
+    - task: NuGetCommand@2
+      inputs:
+        command: 'pack'
+        packagesToPack: 'src/Microsoft.Data.SqlClient/netcore/src/Microsoft.Data.SqlClient.csproj'
+        versioningScheme: 'off'
