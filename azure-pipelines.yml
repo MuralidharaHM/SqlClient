@@ -14,7 +14,11 @@ steps:
       inputs:
         command: 'pack'
         packagesToPack: 'src/Microsoft.Data.SqlClient/netcore/src/Microsoft.Data.SqlClient.csproj'
-        versioningScheme: 'off'
+        configuration: 'Release'
+        versioningScheme: 'byPrereleaseNumber'
+        majorVersion: '1'
+        minorVersion: '0'
+        patchVersion: '1'
     - task: DotNetCoreCLI@2
       inputs:
         command: 'push'
