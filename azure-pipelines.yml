@@ -10,8 +10,10 @@ pool:
   vmImage: windows-latest
 
 steps:
-    - task: NuGetCommand@2
+    - task: DotNetCoreCLI@2
       inputs:
         command: 'pack'
         packagesToPack: 'src/Microsoft.Data.SqlClient/netcore/src/Microsoft.Data.SqlClient.csproj'
+        includesymbols: true
         versioningScheme: 'off'
+    
