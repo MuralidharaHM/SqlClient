@@ -14,13 +14,12 @@ steps:
       inputs:
         command: 'pack'
         packagesToPack: 'src/Microsoft.Data.SqlClient/netcore/src/Microsoft.Data.SqlClient.csproj'
-        includesymbols: true
         versioningScheme: 'off'
     - task: DotNetCoreCLI@2
       inputs:
         command: 'push'
         packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
         nuGetFeedType: 'internal'
-        publishVstsFeed: 'd85e9c14-95bd-4462-9c9e-94ff9ff63be4/186646d6-6707-4808-88e9-6603660fe452'
+        publishVstsFeed: 'd85e9c14-95bd-4462-9c9e-94ff9ff63be4/84b91313-85db-42be-9799-858a11ec5348'
     
     
