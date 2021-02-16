@@ -72,4 +72,4 @@ Check out our [FAQ](https://github.com/dotnet/SqlClient/wiki/Frequently-Asked-Qu
 
 ## License
 
-The Microsoft.Data.SqlClient Driver for SQL Server is licensed under the MIT license. See the [LICENSE](https://github.com/dotnet/SqlClient/blob/master/LICENSE) file for more details
+The Microsoft.Data.SqlClient Driver for SQL Server is licensed under the MIT license. See the [LICENSE](https://github.com/dotnet/SqlClient/blob/master/LICENSE) file for more details.
