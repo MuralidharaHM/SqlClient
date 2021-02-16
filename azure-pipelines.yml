@@ -16,5 +16,11 @@ steps:
         packagesToPack: 'src/Microsoft.Data.SqlClient/netcore/src/Microsoft.Data.SqlClient.csproj'
         includesymbols: true
         versioningScheme: 'off'
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'push'
+        packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+        nuGetFeedType: 'internal'
+        publishVstsFeed: 'd85e9c14-95bd-4462-9c9e-94ff9ff63be4/626558c8-09e3-4df5-9e01-37e4341a095f'
     
     
