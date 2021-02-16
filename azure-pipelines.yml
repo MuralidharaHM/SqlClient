@@ -7,7 +7,7 @@ trigger:
 - 2.0-servicing
 
 pool:
-  vmImage: ubuntu-default
+  vmImage: windows-latest
 
 steps:
     - task: NuGetCommand@2
