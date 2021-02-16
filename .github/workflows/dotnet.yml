@@ -2,7 +2,7 @@ name: .NET
 
 on:
   push:
-    branches: [ master ]
+    branches: [2.0-servicing ]
   pull_request:
     branches: [ master ]
 
@@ -15,8 +15,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.x
     - name: Restore dependencies
       run: dotnet restore src/Microsoft.Data.SqlClient/netcore/src/Microsoft.Data.SqlClient.csproj
     - name: Build
